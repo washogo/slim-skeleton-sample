@@ -9,6 +9,7 @@ use Monolog\Logger;
 use Monolog\Processor\UidProcessor;
 use Psr\Container\ContainerInterface;
 use Psr\Log\LoggerInterface;
+use Illuminate\Database\Capsule\Manager as Capsule;
 
 return function (ContainerBuilder $containerBuilder) {
     $containerBuilder->addDefinitions([
@@ -26,5 +27,17 @@ return function (ContainerBuilder $containerBuilder) {
 
             return $logger;
         },
-    ]);
+        Capsule::class => function (ContainerInterface $c) {
+            $settings = $c->get(SettingsInterface::class);
+            $eloquent = new Capsule;
+            $dbSettings = $settings->get('db');
+            $eloquent->addConnection($dbSettings);
+            // Make this Capsule instance available globally via static methods
+            $eloquent->setAsGlobal();
+            // Setup the Eloquent ORM...
+            $eloquent->bootEloquent();
+
+            return $eloquent;
+        }
+      ]);
 };
