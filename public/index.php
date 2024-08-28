@@ -77,7 +77,7 @@ $app->addBodyParsingMiddleware();
 $errorMiddleware = $app->addErrorMiddleware($displayErrorDetails, $logError, $logErrorDetails);
 $errorMiddleware->setDefaultErrorHandler($errorHandler);
 
-$app->getContainer()->get('Illuminate\Database\Capsule\Manager');
+$app->getContainer()->get(Capsule::class);
 
 // Run App & Emit Response
 $response = $app->handle($request);
