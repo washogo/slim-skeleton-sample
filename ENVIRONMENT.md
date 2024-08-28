@@ -3,40 +3,40 @@
 ## 環境構築手順
 
 1. PHPのインストール
-  1. brew update
-  2. brew install php
-  3. php -v
+    1. brew update
+    2. brew install php
+    3. php -v
 2. Composerのインストール
-  1. brew install composer
-  2. composer -v
+    1. brew install composer
+    2. composer -v
 3. slim-skeletonの構築
-  1. composer create-project slim/slim-skeleton 任意の名前のアプリ名
+    1. composer create-project slim/slim-skeleton 任意の名前のアプリ名
 4. composer.jsonの`require`と`require-dev`の書き換え
-  ```json
-    "require": {
-      "php": "^7.4 || ^8.0",
-      "ext-json": "*",
-      "awurth/slim-validation": "^3.4",
-      "illuminate/database": "^8.58",
-      "monolog/monolog": "^2.9",
-      "php-di/php-di": "^6.4",
-      "picqer/php-barcode-generator": "^2.2",
-      "slim/psr7": "^1.6",
-      "slim/slim": "^4.12",
-      "vlucas/phpdotenv": "^5.3"
-    },
-    "require-dev": {
-      "jangregor/phpstan-prophecy": "^1.0.0",
-      "phpspec/prophecy-phpunit": "^2.2",
-      "phpstan/extension-installer": "^1.3.1",
-      "phpstan/phpstan": "^1.10",
-      "phpunit/phpunit": "^9.6.15"
-    },
-  ```
-5. 動作確認
-  1. cd 任意の名前のアプリ名
-  2. composer start
-  3. composer test
+    ```json
+      "require": {
+        "php": "^7.4 || ^8.0",
+        "ext-json": "*",
+        "awurth/slim-validation": "^3.4",
+        "illuminate/database": "^8.58",
+        "monolog/monolog": "^2.9",
+        "php-di/php-di": "^6.4",
+        "picqer/php-barcode-generator": "^2.2",
+        "slim/psr7": "^1.6",
+        "slim/slim": "^4.12",
+        "vlucas/phpdotenv": "^5.3"
+      },
+      "require-dev": {
+        "jangregor/phpstan-prophecy": "^1.0.0",
+        "phpspec/prophecy-phpunit": "^2.2",
+        "phpstan/extension-installer": "^1.3.1",
+        "phpstan/phpstan": "^1.10",
+        "phpunit/phpunit": "^9.6.15"
+      },
+    ```
+1. 動作確認
+    1. cd 任意の名前のアプリ名
+    2. composer start
+    3. composer test
 
 ## バージョン情報
 
