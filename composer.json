@@ -25,7 +25,7 @@
     "php": "^7.4 || ^8.0",
     "ext-json": "*",
     "awurth/slim-validation": "^3.4",
-    "illuminate/database": "^8.58",
+    "illuminate/database": "^11.25",
     "monolog/monolog": "^2.9",
     "php-di/php-di": "^6.4",
     "picqer/php-barcode-generator": "^2.2",
