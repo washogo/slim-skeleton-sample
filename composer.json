@@ -24,7 +24,7 @@
   "require": {
     "php": "^7.4 || ^8.0",
     "ext-json": "*",
-    "awurth/slim-validation": "^3.4",
+    "awurth/slim-validation": "^5.0",
     "illuminate/database": "^8.58",
     "monolog/monolog": "^2.9",
     "php-di/php-di": "^6.4",
